@@ -1,0 +1,26 @@
+import os
+os.system('cls')
+
+#Leia a idade de 5 pessoas em um vetor, aceitando somente valores
+#entre 0 e 120. Repita valores inválidos e mostre maior idade,
+#menor idade e quantidade de maiores de idade.
+
+idades = []
+
+for i in range(5):
+    while True:
+        idade = int(input(f"Digite a idade da {i + 1}ª pessoa (0 a 120): "))
+        if 0 <= idade <= 120:
+            idades.append(idade)
+            break
+        print("Idade inválida! Digite um valor entre 0 e 120.")
+
+maior_idade = max(idades)
+menor_idade = min(idades)
+maiores_de_idade = sum(1 for idade in idades if idade >= 18)
+
+print("\n--- RESULTADOS ---")
+print("Idades digitadas:", idades)
+print(f"Maior idade: {maior_idade}")
+print(f"Menor idade: {menor_idade}")
+print(f"Quantidade de maiores de idade (>= 18): {maiores_de_idade}")# Algoritmo em Python

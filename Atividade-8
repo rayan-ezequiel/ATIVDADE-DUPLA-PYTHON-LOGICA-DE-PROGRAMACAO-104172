@@ -1,0 +1,25 @@
+import os
+os.system('cls')
+
+#Leia o salário de 5 funcionários em vetores, mostre o nome de quem
+#tem o maior salário e quantos ganham acima de R$ 2.000,00.
+
+nomes = []
+salarios = []
+
+for i in range(5):
+    nome = input(f"Digite o nome do {i + 1}º funcionário: ")
+    salario = float(input(f"Digite o salário de {nome}: R$ "))
+    nomes.append(nome)
+    salarios.append(salario)
+
+maior_salario = max(salarios)
+indice_maior = salarios.index(maior_salario)
+nome_maior_salario = nomes[indice_maior]
+
+acima_2000 = sum(1 for salario in salarios if salario > 2000.00)
+
+
+print("\n--- RESULTADOS ---")
+print(f"Funcionário com o maior salário: {nome_maior_salario} (R$ {maior_salario:.2f})")
+print(f"Quantidade de funcionários que ganham mais de R$ 2.000,00: {acima_2000}")

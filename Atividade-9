@@ -1,0 +1,17 @@
+import os
+os.system('cls')
+
+#Leia 6 números inteiros em um vetor. Substitua cada par por 0 e cada
+#ímpar por 1. Mostre o vetor antes e depois.
+
+vetor_original = []
+print("Digite 6 números inteiros:")
+for i in range(6):
+    num = int(input(f"Número {i + 1}: "))
+    vetor_original.append(num)
+
+vetor_modificado = [0 if num % 2 == 0 else 1 for num in vetor_original]
+
+print("\n--- RESULTADOS ---")
+print("Vetor original:  ", vetor_original)
+print("Vetor modificado:", vetor_modificado)
