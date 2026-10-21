@@ -8,5 +8,8 @@ os.system('cls')
 numeros_inteiros = []
 
 for i in range(5):
+    
     numero = int(input(f'Digite o {i + 1}º numero: '))
-print(f'Números: {numeros_inteiros}\nOrdem Inversa: {(numeros_inteiros[4]), (numeros_inteiros[3])} ')
+    numeros_inteiros.append(numero)
+print(f'Números: {numeros_inteiros}')
+print(f'Ordem inversa: {numeros_inteiros[: : -1]}')
