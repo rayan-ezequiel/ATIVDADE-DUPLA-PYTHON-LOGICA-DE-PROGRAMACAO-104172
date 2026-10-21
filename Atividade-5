@@ -1,0 +1,21 @@
+import os
+os.system('cls')
+
+#5- leia 5 notas em um vetor, calcule a média, da turma e mostre
+#as notas, a média e quantas ficaram acima dela.
+
+
+notas = []
+
+for i in range(5):
+    nota = float(input(f"Digite a nota do aluno {i + 1}: "))
+    notas.append(nota)
+
+media = sum(notas) / len(notas)
+
+acima_da_media = sum(1 for nota in notas if nota > media)
+
+print("\n--- RESULTADOS ---")
+print("Notas da turma:", notas)
+print(f"Média da turma: {media:.2f}")
+print(f"Quantidade de notas acima da média: {acima_da_media}")

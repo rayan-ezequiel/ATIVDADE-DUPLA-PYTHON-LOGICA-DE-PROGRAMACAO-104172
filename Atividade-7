@@ -1,0 +1,18 @@
+import os
+os.system('cls')
+
+#Leia 10 números inteiros em um vetor, Copie para um segundo vetor
+#apenas os positivos, mostre-o e informe quantos elementos foram copiados.
+
+
+vetor_original = []
+print("Digite 10 números inteiros:")
+for i in range(10):
+    num = int(input(f"Número {i + 1}: "))
+    vetor_original.append(num)
+
+vetor_positivos = [num for num in vetor_original if num > 0]
+
+print("\n--- RESULTADOS ---")
+print("Vetor de números positivos:", vetor_positivos)
+print(f"Quantidade de elementos copiados: {len(vetor_positivos)}")
